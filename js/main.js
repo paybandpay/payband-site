@@ -187,10 +187,29 @@
     });
   }
 
+
+  /* 7. Tracker filters: show only the member states matching the chosen status. */
+  function initTrackerFilters() {
+    var btns = document.querySelectorAll('.tk-btn');
+    if (!btns.length) return;
+    var rows = document.querySelectorAll('#tk-body tr');
+    Array.prototype.forEach.call(btns, function (btn) {
+      btn.addEventListener('click', function () {
+        var want = btn.getAttribute('data-filter');
+        Array.prototype.forEach.call(btns, function (b) { b.classList.toggle('is-on', b === btn); });
+        Array.prototype.forEach.call(rows, function (row) {
+          var show = (want === 'all') || (row.getAttribute('data-status') === want);
+          row.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  }
+
   initReveal();
   initCountUp();
   initParallax();
   initTilt();
   initHeaderScroll();
   initForms();
+  initTrackerFilters();
 })();
