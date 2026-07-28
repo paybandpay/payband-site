@@ -640,6 +640,10 @@ th { color: var(--navy); background: rgba(27, 42, 65, 0.04); }
 /* ===== Persona review fixes (July 2026) ===== */
 @media (max-width: 520px) {
   .site-header { position: static; }   /* two-row nav ate 16% of mobile viewport when sticky */
+  /* The overlay header stops overlaying the hero at this width, so it needs its own navy
+     background. Without it the near-white wordmark sat on the light page and vanished. */
+  .header-overlay { background: var(--navy); border-bottom: none; }
+  .header-overlay.scrolled { position: static; }
 }
 .compare { overflow-x: auto; }
 .compare table { min-width: 560px; }
