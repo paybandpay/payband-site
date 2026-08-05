@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact a UK Reward Consultant | Payband Advisory</title>
-  <meta name="description" content="Email Payband Advisory a short written brief for salary benchmarking, pay bands or pay transparency work. Get a fixed quote and start date by email.">
+  <meta name="description" content="Send Payband Advisory a short written brief for salary benchmarking, pay bands or pay transparency work. Get a fixed quote and start date by email within one working day.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact a UK Reward Consultant | Payband Advisory">
@@ -70,23 +70,52 @@
     </section>
 
     <section class="section">
-      <h2>Email your brief</h2>
-      <div class="callout" style="max-width:680px;">
-        <p><strong>Four things are enough:</strong></p>
-        <ul style="margin:0 0 18px 20px;">
-          <li>the role, pay question or transparency problem</li>
-          <li>your organisation and rough headcount</li>
-          <li>the countries involved, if relevant</li>
-          <li>the date you need an answer by</li>
-        </ul>
-        <p><a class="btn" href="mailto:kieron@payband.uk?subject=Payband%20brief">Email your brief</a></p>
-        <p style="font-size:0.9rem;color:var(--grey);">Or copy <a href="mailto:kieron@payband.uk">kieron@payband.uk</a>. You will get a fixed quote and start date by email within one working day. No call required.</p>
+      <h2>Your brief in 60 seconds</h2>
+      <p>Four lines is enough. You get an email confirmation with a quote and a start date by return.</p>
+      <form id="brief-form" action="https://script.google.com/macros/s/AKfycbzZI3BI5aonZjQoKFpanAPdDTHlgm56sD4VvzsHXsakJB2xbV2dNgVmDmstumDgHG8/exec" method="POST" target="hidden_iframe" onsubmit="return handleBriefSubmit(this);">
+        <input type="hidden" name="form-name" value="brief">
+        <!-- Honeypot: real users won't fill this. Bots will. -->
+        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+          <label>Do not fill this field</label>
+          <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required autocomplete="name" maxlength="120">
+          </label>
+          <label>
+            <span>Your email</span>
+            <input type="email" name="email" required autocomplete="email" maxlength="200">
+          </label>
+          <label>
+            <span>Organisation</span>
+            <input type="text" name="org" autocomplete="organization" maxlength="200">
+          </label>
+          <label>
+            <span>What you need (one or two lines)</span>
+            <textarea name="need" required rows="4" maxlength="2000" placeholder="The role or pay question, your organisation and rough headcount, any countries involved, and the date you need an answer by."></textarea>
+          </label>
+          <label>
+            <span>Deadline (optional)</span>
+            <input type="text" name="deadline" placeholder="e.g. Friday 15 Aug" maxlength="120">
+          </label>
+        </div>
+        <p class="form-note">Sending takes one click. You will get a fixed quote and a start date by email within one working day. No call required.</p>
+        <button type="submit" class="btn" id="brief-submit-btn">Send my brief</button>
+      </form>
+      <div id="brief-success" hidden>
+        <div class="callout success">
+          <h3>Brief received. Quote is on its way.</h3>
+          <p>You will get a fixed quote and a start date by email within one working day. If you do not see the email, check your spam folder or email <a href="mailto:kieron@payband.uk">kieron@payband.uk</a> directly.</p>
+        </div>
       </div>
+      <iframe name="hidden_iframe" style="display:none;" title="Form submission target"></iframe>
     </section>
 
     <section class="section">
       <div class="callout">
-        <h2>Prefer another route?</h2>
+        <h2>Prefer email?</h2>
         <p>Email <a href="mailto:kieron@payband.uk">kieron@payband.uk</a> with a couple of lines, or message the <a href="https://www.linkedin.com/company/payband-advisory/">Payband Advisory LinkedIn page</a>. Everything gets a reply from me, not a bot.</p>
       </div>
     </section>
@@ -94,7 +123,7 @@
     <section class="section">
       <h2>Legal disclosure</h2>
       <p>Payband Advisory is a trading name of Rewcruit Ltd, registered in England and Wales, company number 16931579, registered office 3rd Floor, 86-90 Paul Street, London EC2A 4NE. ICO registration: ZB973596. Email: <a href="mailto:kieron@payband.uk">kieron@payband.uk</a>.</p>
-          </section>
+    </section>
 
   </div>
 </main>
@@ -108,5 +137,27 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script>
+function handleBriefSubmit(form) {
+  // Honeypot check: if the bot field is filled, silently drop the submission.
+  var bot = form.querySelector('input[name="bot-field"]');
+  if (bot && bot.value) {
+    return false;
+  }
+  // Disable the submit button to prevent double-submits and show progress.
+  var btn = document.getElementById('brief-submit-btn');
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+  }
+  // Reveal the success panel after a short delay so the form has time to POST.
+  setTimeout(function() {
+    form.hidden = true;
+    var success = document.getElementById('brief-success');
+    if (success) success.hidden = false;
+  }, 1200);
+  return true;
+}
+</script>
 </body>
 </html>
