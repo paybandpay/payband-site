@@ -819,3 +819,113 @@ th { color: var(--navy); background: rgba(27, 42, 65, 0.04); }
 @media (max-width: 640px) {
   .form-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Sample report page ===== */
+.lede-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 0 0 12px;
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid var(--navy);
+  border-radius: 6px;
+  padding: 11px 22px;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: background 0.15s ease;
+}
+.btn-ghost:hover {
+  background: rgba(27, 42, 65, 0.06);
+}
+.report-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px 24px;
+  background: var(--off-white);
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin: 24px 0 32px;
+}
+.report-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.report-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+.report-value {
+  font-size: 1rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+.recommendation {
+  background: rgba(232, 163, 61, 0.12);
+  border-left: 4px solid var(--amber);
+  padding: 24px 28px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 16px 0 32px;
+}
+table.sources {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 32px;
+  font-size: 0.92rem;
+}
+table.sources th,
+table.sources td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(27, 42, 65, 0.12);
+  vertical-align: top;
+}
+table.sources th {
+  background: var(--off-white);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+table.sources tbody tr:hover {
+  background: rgba(27, 42, 65, 0.03);
+}
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.tier-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 42, 65, 0.10);
+  border-radius: 8px;
+  padding: 20px 22px;
+}
+.tier-card h3 {
+  color: var(--navy);
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+@media (max-width: 640px) {
+  .btn-ghost { margin-left: 0; margin-top: 10px; }
+  .report-meta { grid-template-columns: 1fr; }
+}
