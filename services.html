@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salary Benchmarking &amp; Pay Band Services UK | Payband</title>
-  <meta name="description" content="Fixed-fee UK reward consultancy: salary benchmarking from £750, pay bands from £2,500 and annual reward support from £8,000. Pay you can explain.">
+  <title>Salary Benchmarking & Pay Band Services UK | Payband</title>
+  <meta name="description" content="Fixed-fee salary benchmarking, pay band design, pay transparency readiness and reward consultancy from Payband Advisory. From £150 Micro-Benchmark, £750 Benchmark, £2,500 Build, £8,000 Partner.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Salary Benchmarking &amp; Pay Band Services UK | Payband">
-  <meta property="og:description" content="Fixed-fee UK reward consultancy: salary benchmarking from £750, pay bands from £2,500 and annual reward support from £8,000.">
+  <meta property="og:title" content="Salary Benchmarking & Pay Band Services UK | Payband">
+  <meta property="og:description" content="Fixed-fee salary benchmarking, pay band design, pay transparency readiness and reward consultancy for UK employers. From £150.">
   <meta property="og:image" content="https://payband.uk/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,46 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Service",
+        "@id": "https://payband.uk/services.html#micro-benchmark",
+        "name": "Payband Micro-Benchmark",
+        "serviceType": "Single-role salary benchmark with one primary source",
+        "provider": {"@id": "https://payband.uk/#organization"},
+        "areaServed": "GB",
+        "description": "One role, one geography, one source, one paragraph recommendation. Delivered in 2 working days. £150 fixed fee.",
+        "offers": {"@type": "Offer", "price": "150", "priceCurrency": "GBP"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://payband.uk/services.html#benchmark",
+        "name": "Payband Benchmark",
+        "serviceType": "Salary benchmark with three independent sources",
+        "provider": {"@id": "https://payband.uk/#organization"},
+        "areaServed": "GB",
+        "description": "One UK role in one agreed geography, three independent perspectives, source footnotes, recorded walkthrough and one clarification round. From £750, 5 working days.",
+        "offers": {"@type": "Offer", "price": "750", "priceCurrency": "GBP"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://payband.uk/services.html#build",
+        "name": "Payband Build",
+        "serviceType": "Pay band design, benchmarking refresh, transparency readiness audit, benefits benchmarking, job architecture",
+        "provider": {"@id": "https://payband.uk/#organization"},
+        "areaServed": "GB",
+        "description": "A defined reward project, built and handed over. From £2,500 fixed fee, 3 to 6 weeks.",
+        "offers": {"@type": "Offer", "price": "2500", "priceCurrency": "GBP"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://payband.uk/services.html#partner",
+        "name": "Payband Partner",
+        "serviceType": "Annual reward function retainer",
+        "provider": {"@id": "https://payband.uk/#organization"},
+        "areaServed": "GB",
+        "description": "12-month reward support including up to six Benchmarks, one annual pay review cycle, quarterly reward reviews and routine advice. From £8,000 fixed annual fee.",
+        "offers": {"@type": "Offer", "price": "8000", "priceCurrency": "GBP"}
+      },
+      {
         "@type": "BreadcrumbList",
         "@id": "https://payband.uk/services.html#breadcrumb",
         "itemListElement": [
@@ -34,44 +74,39 @@
         ]
       },
       {
-        "@type": "Service",
-        "@id": "https://payband.uk/services.html#benchmark-service",
-        "name": "Payband Benchmark",
-        "serviceType": "Salary benchmarking",
-        "description": "A one-page, board-ready salary benchmark for one UK role in one agreed geography, using at least three independent perspectives and delivered in five working days.",
-        "provider": {"@id": "https://payband.uk/#organization"},
-        "areaServed": {"@type": "Country", "name": "United Kingdom"},
-        "offers": {"@type": "Offer", "url": "https://payband.uk/services.html#benchmark", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "750", "priceCurrency": "GBP"}}
-      },
-      {
-        "@type": "Service",
-        "@id": "https://payband.uk/services.html#build-service",
-        "name": "Payband Build",
-        "serviceType": "Pay bands, reward projects and pay transparency readiness",
-        "description": "A defined reward project such as pay bands, salary benchmarking, job architecture or a pay transparency readiness audit.",
-        "provider": {"@id": "https://payband.uk/#organization"},
-        "areaServed": [{"@type": "Country", "name": "United Kingdom"}, {"@type": "Place", "name": "European Union"}],
-        "offers": {"@type": "Offer", "url": "https://payband.uk/services.html#build", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "2500", "priceCurrency": "GBP"}}
-      },
-      {
-        "@type": "Service",
-        "@id": "https://payband.uk/services.html#partner-service",
-        "name": "Payband Partner",
-        "serviceType": "Annual reward consultancy support",
-        "description": "A defined annual reward service including up to six single-role UK benchmarks, one annual pay review cycle, quarterly reviews and routine written advice normally answered within two working days.",
-        "provider": {"@id": "https://payband.uk/#organization"},
-        "areaServed": [{"@type": "Country", "name": "United Kingdom"}, {"@type": "Place", "name": "European Union"}],
-        "offers": {"@type": "Offer", "url": "https://payband.uk/services.html#partner", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "8000", "priceCurrency": "GBP"}}
-      },
-      {
         "@type": "FAQPage",
         "@id": "https://payband.uk/services.html#faq",
         "mainEntity": [
-          {"@type": "Question", "name": "What does a salary benchmark include?", "acceptedAnswer": {"@type": "Answer", "text": "The £750 starting fee covers one UK role in one agreed geography, at least three independent perspectives, a recommended salary or range, source footnotes, stated assumptions, a recorded walkthrough or live call and one written clarification round. It is delivered in five working days from briefing."}},
-          {"@type": "Question", "name": "Can Payband Advisory build pay bands for a whole organisation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Payband Build can cover organisation-wide pay bands with the method documented so your team can maintain them. The usual timeline is three to six weeks, depending on scope."}},
-          {"@type": "Question", "name": "Do you work with UK employers that have staff in the EU?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Salary benchmarking and reward projects are available UK-wide. Pay transparency readiness work can cover UK employers with staff in EU member states, based on the relevant national rules and their current transposition status."}},
-          {"@type": "Question", "name": "What does Payband Partner include?", "acceptedAnswer": {"@type": "Answer", "text": "The £8,000 annual starting fee includes up to six single-role UK Benchmarks, one annual pay review cycle, quarterly reward reviews, a written decision log and routine written advice normally answered within two working days. Larger projects and work outside the agreed annual scope are quoted separately."}},
-          {"@type": "Question", "name": "How do I start a reward consultancy project?", "acceptedAnswer": {"@type": "Answer", "text": "Email a short written brief covering the role or pay question, your organisation and rough headcount, the countries involved and your deadline. You will get a fixed quote and start date by email."}}
+          {
+            "@type": "Question",
+            "name": "What does a £150 Micro-Benchmark include?",
+            "acceptedAnswer": {"@type": "Answer", "text": "One role in one geography using a single primary source (ONS, published survey or live market evidence). The deliverable is a one-paragraph recommendation with source link and date, delivered in two working days."}
+          },
+          {
+            "@type": "Question",
+            "name": "What does a salary benchmark include?",
+            "acceptedAnswer": {"@type": "Answer", "text": "One UK role in one agreed geography, at least three independent perspectives, a recommended salary or range, source footnotes, stated assumptions, a recorded walkthrough or live call and one written clarification round. Delivered in five working days from briefing."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can Payband Advisory build pay bands for a whole organisation?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Payband Build can cover organisation-wide pay bands with the method documented so your team can maintain them. The usual timeline is three to six weeks, depending on scope."}
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with UK employers that have staff in the EU?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Salary benchmarking and reward projects are available UK-wide. Pay transparency readiness work can cover UK employers with staff in EU member states, based on the relevant national rules and their current transposition status."}
+          },
+          {
+            "@type": "Question",
+            "name": "What does Payband Partner include?",
+            "acceptedAnswer": {"@type": "Answer", "text": "The £8,000 annual starting fee includes up to six single-role UK Benchmarks, one annual pay review cycle, quarterly reward reviews, a written decision log and routine written advice normally answered within two working days. Larger projects and work outside the agreed annual scope are quoted separately."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I start a reward consultancy project?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Email a short written brief covering the role or pay question, your organisation and rough headcount, the countries involved and your deadline. You will get a fixed quote and start date by email."}
+          }
         ]
       }
     ]
@@ -91,6 +126,7 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <a class="nav-cta" href="contact.html">Send your brief</a>
   </div>
 </header>
 
@@ -99,13 +135,30 @@
 
     <section class="section">
       <h1>Salary benchmarking, pay bands and reward consultancy</h1>
-      <p class="lede">Three tiers for UK employers, plus pay transparency readiness across the UK and EU. Fixed fees agreed before work starts. Every deliverable is something you can act on in 60 seconds or it gets rewritten.</p>
+      <p class="lede">Four tiers for UK employers, plus pay transparency readiness across the UK and EU. Fixed fees agreed before work starts. Every deliverable is something you can act on in 60 seconds or it gets rewritten.</p>
+    </section>
+
+    <section class="section" id="micro">
+      <h2>Payband Micro-Benchmark</h2>
+      <p class="price key-number" style="font-size:1.3rem;">&pound;150, fixed fee</p>
+      <p><strong>What the &pound;150 fee covers:</strong> one role, one geography, one source, one paragraph recommendation. Delivered in 2 working days.</p>
+      <ul>
+        <li>Best for a single hire or a single pay decision you need to make this week</li>
+        <li>One primary data source (ONS, published survey, or live market evidence)</li>
+        <li>A recommended salary or range, written as one paragraph you can paste into an email or a board note</li>
+        <li>Source link, source date and stated assumptions</li>
+        <li>No video walkthrough. No clarification round. Just the answer.</li>
+      </ul>
+      <p><strong>Quoted separately:</strong> additional sources, multiple roles, video walkthrough, written clarification or anything that needs more than one source of evidence.</p>
+      <p><strong>The outcome:</strong> you stop guessing. You make the pay decision with one defensible number.</p>
+      <p><strong>Timeline:</strong> 2 working days from briefing.</p>
+      <p><a class="btn" href="contact.html">Order the &pound;150 Micro-Benchmark</a></p>
     </section>
 
     <section class="section" id="benchmark">
       <h2>Payband Benchmark</h2>
-      <p class="price key-number" style="font-size:1.3rem;">From £750, fixed fee</p>
-      <p><strong>What the £750 starting fee covers:</strong> one UK role, in one agreed geography, with a clear base salary recommendation.</p>
+      <p class="price key-number" style="font-size:1.3rem;">From &pound;750, fixed fee</p>
+      <p><strong>What the &pound;750 starting fee covers:</strong> one UK role, in one agreed geography, with a clear base salary recommendation.</p>
       <ul>
         <li>The role matched by scope and accountability, not job title alone</li>
         <li>At least 3 independent perspectives: official or published data, relevant sector evidence and current market evidence</li>
@@ -122,7 +175,7 @@
 
     <section class="section" id="build">
       <h2>Payband Build</h2>
-      <p class="price key-number" style="font-size:1.3rem;">From £2,500, fixed fee</p>
+      <p class="price key-number" style="font-size:1.3rem;">From &pound;2,500, fixed fee</p>
       <p><strong>What you get:</strong> a defined reward project, built and handed over. Pick one:</p>
       <ul>
         <li>Pay bands for your whole organisation, with the method documented so you can maintain them without me</li>
@@ -138,8 +191,8 @@
 
     <section class="section" id="partner">
       <h2>Payband Partner</h2>
-      <p class="price key-number" style="font-size:1.3rem;">From £8,000, fixed annual fee</p>
-      <p><strong>What the £8,000 annual starting fee covers:</strong> a defined decision plan and named reward support, without permanent headcount.</p>
+      <p class="price key-number" style="font-size:1.3rem;">From &pound;8,000, fixed annual fee</p>
+      <p><strong>What the &pound;8,000 annual starting fee covers:</strong> a defined decision plan and named reward support, without permanent headcount.</p>
       <ul>
         <li>Up to 6 single-role UK Benchmarks during the 12-month term</li>
         <li>One annual pay review cycle: budget modelling, distribution checks and manager guidance</li>
@@ -171,16 +224,17 @@
       <h2 id="compare-heading">Which one fits</h2>
       <table>
         <thead>
-          <tr><th></th><th>Benchmark</th><th>Build</th><th>Partner</th></tr>
+          <tr><th></th><th>Micro</th><th>Benchmark</th><th>Build</th><th>Partner</th></tr>
         </thead>
         <tbody>
-          <tr><td>Best for</td><td>One pay decision, this week</td><td>A structure or a compliance position</td><td>A defined year of reward decisions</td></tr>
-          <tr><td>Fixed fee</td><td>From £750</td><td>From £2,500</td><td>From £8,000 a year</td></tr>
-          <tr><td>Turnaround</td><td>5 working days</td><td>3 to 6 weeks</td><td>2 working days for routine advice</td></tr>
-          <tr><td>Board-ready one-pager</td><td><span class="tick">Yes</span></td><td><span class="tick">Yes</span></td><td><span class="tick">For included Benchmarks</span></td></tr>
-          <tr><td>Pay bands</td><td>Not included</td><td><span class="tick">Yes</span></td><td>Quoted separately</td></tr>
-          <tr><td>Transparency readiness</td><td>Not included</td><td><span class="tick">Audit</span></td><td><span class="tick">Developments tracked</span></td></tr>
-          <tr><td>Typical buyer</td><td>Founder or COO making an offer</td><td>HR director without a reward team</td><td>Firm with EU exposure or 100+ heads</td></tr>
+          <tr><td>Best for</td><td>One decision, this week</td><td>One pay decision, this week</td><td>A structure or a compliance position</td><td>A defined year of reward decisions</td></tr>
+          <tr><td>Fixed fee</td><td>&pound;150</td><td>From &pound;750</td><td>From &pound;2,500</td><td>From &pound;8,000 a year</td></tr>
+          <tr><td>Turnaround</td><td>2 working days</td><td>5 working days</td><td>3 to 6 weeks</td><td>2 working days for routine advice</td></tr>
+          <tr><td>Sources</td><td>1 primary</td><td>3+ independent</td><td>Project-defined</td><td>Included in Benchmarks</td></tr>
+          <tr><td>Deliverable</td><td>One paragraph</td><td><span class="tick">Yes</span> board-ready one-pager</td><td><span class="tick">Yes</span> board-ready one-pager</td><td><span class="tick">For included Benchmarks</span></td></tr>
+          <tr><td>Pay bands</td><td>Not included</td><td>Not included</td><td><span class="tick">Yes</span></td><td>Quoted separately</td></tr>
+          <tr><td>Transparency readiness</td><td>Not included</td><td>Not included</td><td><span class="tick">Audit</span></td><td><span class="tick">Developments tracked</span></td></tr>
+          <tr><td>Typical buyer</td><td>Founder pricing one role</td><td>Founder or COO making an offer</td><td>HR director without a reward team</td><td>Firm with EU exposure or 100+ heads</td></tr>
         </tbody>
       </table>
       <p style="margin-top:18px;"><strong>The standing rule on everything above:</strong> the fee is agreed in writing before work starts and does not move. If a deliverable cannot be acted on in 60 seconds, it gets rewritten before it gets sent.</p>
@@ -189,8 +243,12 @@
     <section class="section faq" aria-labelledby="services-faq-heading">
       <h2 id="services-faq-heading">Reward consultancy questions</h2>
       <details>
+        <summary>What does a &pound;150 Micro-Benchmark include?</summary>
+        <p>The &pound;150 Micro-Benchmark covers one role in one geography using a single primary source (ONS, published survey or live market evidence). The deliverable is a one-paragraph recommendation you can paste into an email or a board note, with source link and date, delivered in two working days. It is for one pay decision you need to make this week, not a full pay structure.</p>
+      </details>
+      <details>
         <summary>What does a salary benchmark include?</summary>
-        <p>The £750 starting fee covers one UK role in one agreed geography, at least three independent perspectives, a recommended salary or range, source footnotes, stated assumptions, a recorded walkthrough or live call and one written clarification round. It is delivered in five working days from briefing.</p>
+        <p>The &pound;750 starting fee covers one UK role in one agreed geography, at least three independent perspectives, a recommended salary or range, source footnotes, stated assumptions, a recorded walkthrough or live call and one written clarification round. It is delivered in five working days from briefing.</p>
       </details>
       <details>
         <summary>Can Payband Advisory build pay bands for a whole organisation?</summary>
@@ -202,7 +260,7 @@
       </details>
       <details>
         <summary>What does Payband Partner include?</summary>
-        <p>The £8,000 annual starting fee includes up to six single-role UK Benchmarks, one annual pay review cycle, quarterly reward reviews, a written decision log and routine written advice normally answered within two working days. Larger projects and work outside the agreed annual scope are quoted separately.</p>
+        <p>The &pound;8,000 annual starting fee includes up to six single-role UK Benchmarks, one annual pay review cycle, quarterly reward reviews, a written decision log and routine written advice normally answered within two working days. Larger projects and work outside the agreed annual scope are quoted separately.</p>
       </details>
       <details>
         <summary>How do I start a reward consultancy project?</summary>
