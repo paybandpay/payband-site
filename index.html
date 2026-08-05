@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salary Benchmarking from GBP 750 | Pay Bands &amp; Pay Transparency | Payband Advisory</title>
-  <meta name="description" content="Fixed-fee salary benchmarking for UK employers and pay transparency readiness across the UK and EU. One-page board-ready benchmarks from £750, every number footnoted. Pay you can explain.">
+  <title>Salary Benchmarking &amp; Pay Bands UK | Payband Advisory</title>
+  <meta name="description" content="Fixed-fee salary benchmarking for UK employers and pay transparency readiness across the UK and EU. One-page, board-ready benchmarks from £750, fully footnoted.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Payband Advisory | Pay you can explain">
-  <meta property="og:description" content="Fixed-fee salary benchmarking for UK employers and pay transparency readiness across the UK and EU. Board-ready benchmarks from £750.">
+  <meta property="og:title" content="Salary Benchmarking &amp; Pay Bands UK | Payband Advisory">
+  <meta property="og:description" content="Fixed-fee salary benchmarking for UK employers and pay transparency readiness across the UK and EU. One-page, board-ready benchmarks from £750.">
   <meta property="og:image" content="https://payband.uk/img/og-image.png">
   <meta property="og:url" content="https://payband.uk/">
+  <meta property="og:site_name" content="Payband Advisory">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image:alt" content="Payband Advisory. Pay you can explain.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +22,10 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": "https://payband.uk/#organization",
   "name": "Payband Advisory",
-  "url": "https://payband.uk",
+  "url": "https://payband.uk/",
   "logo": "https://payband.uk/favicon.svg",
   "image": "https://payband.uk/img/og-image.png",
   "description": "Fixed-fee salary benchmarking for UK employers and pay transparency readiness across the UK and EU. Board-ready benchmarks from GBP 750 in five working days, every figure footnoted.",
@@ -78,22 +81,34 @@
       {
         "@type": "Offer",
         "name": "Payband Benchmark",
-        "price": "750",
-        "priceCurrency": "GBP",
+        "url": "https://payband.uk/services.html#benchmark",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": "750",
+          "priceCurrency": "GBP"
+        },
         "description": "One role benchmarked against at least three independent sources. One page, board ready, five working days."
       },
       {
         "@type": "Offer",
         "name": "Payband Build",
-        "price": "2500",
-        "priceCurrency": "GBP",
+        "url": "https://payband.uk/services.html#build",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": "2500",
+          "priceCurrency": "GBP"
+        },
         "description": "Pay bands, benchmarking refresh, pay transparency readiness audit, benefits benchmarking, job architecture."
       },
       {
         "@type": "Offer",
         "name": "Payband Partner",
-        "price": "8000",
-        "priceCurrency": "GBP",
+        "url": "https://payband.uk/services.html#partner",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": "8000",
+          "priceCurrency": "GBP"
+        },
         "description": "A reward function on call for a year, without the headcount."
       }
     ]
@@ -112,7 +127,7 @@
   },
   "email": "kieron@payband.uk",
   "url": "https://payband.uk/about.html",
-  "description": "Reward and compensation professional with seven years across in-house, Big Four and global professional-services environments, including a multi-country pay transparency programme.",
+  "description": "Reward and compensation professional with seven years in reward and ten years working with people data, including a multi-country pay transparency programme.",
   "knowsAbout": [
     "Compensation",
     "Pay transparency",
@@ -131,6 +146,50 @@
     "https://www.linkedin.com/in/kpowz",
     "https://www.youtube.com/@paybandpay"
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://payband.uk/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What if we just need one number, fast?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is exactly what a Payband Benchmark is: one role, at least three independent sources and a recommendation you can act on the same week. If you need pay bands later, that can follow as a separate fixed-fee project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who actually does the work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kieron Power does the work. The person who reads your brief is the person who builds your report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does fixed fee actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The price is agreed in writing before work starts and it does not move. If the work grows beyond the brief, you get a new fixed quote to approve first."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://payband.uk/#website",
+  "name": "Payband Advisory",
+  "url": "https://payband.uk/",
+  "publisher": {"@id": "https://payband.uk/#organization"},
+  "inLanguage": "en-GB"
 }
 </script>
   <link rel="canonical" href="https://payband.uk/">
@@ -246,6 +305,7 @@
             <li>A recorded video walkthrough you can replay and share with your board (a live call if you prefer)</li>
           </ul>
           <a class="btn" href="services.html#benchmark">See what a Benchmark includes</a>
+          <p class="sample-link"><a href="sample-benchmark.html">View the full illustrative sample benchmark</a></p>
         </div>
       </div>
     </section>
@@ -254,7 +314,7 @@
       <div class="founder-strip">
         <img src="img/kieron.jpg" alt="Kieron Power">
         <div>
-          <h3>Every report is built by Kieron Power. Nobody else.</h3>
+          <h2>Every report is built by Kieron Power. Nobody else.</h2>
           <p>Seven years in reward across in-house, Big Four and global professional-services environments, including a multi-country pay transparency programme. One adviser, not a bench of juniors. <a href="about.html">More about Kieron</a> or <a href="https://www.linkedin.com/in/kpowz">find him on LinkedIn</a>.</p>
         </div>
       </div>
@@ -283,7 +343,7 @@
 
     <section class="section">
       <div class="callout">
-        <h3>Example benchmark brief</h3>
+        <h2>Example benchmark brief</h2>
         <p>A one-page Managing Director salary benchmark triangulating ONS data, sector pay scales and live market evidence, with a phased recommendation and every figure footnoted.</p>
       </div>
       <p class="exp-strip" style="margin-top:28px;"><strong>In-house reward</strong> &middot; <strong>Big Four consulting</strong> &middot; <strong>global professional services</strong> &middot; multi-country pay transparency</p>
@@ -301,7 +361,7 @@
       </details>
       <details>
         <summary>What if we just need one number, fast?</summary>
-        <p>That is exactly what a Benchmark is. One role, at least three independent sources, a recommendation you can act on the same week. Most clients start there and come back for bands later.</p>
+        <p>That is exactly what a Benchmark is. One role, at least three independent sources, a recommendation you can act on the same week. If you need pay bands later, that can follow as a separate fixed-fee project.</p>
       </details>
       <details>
         <summary>Who actually does the work?</summary>

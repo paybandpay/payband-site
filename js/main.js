@@ -58,46 +58,7 @@
     }, 3000);
   }
 
-  /* 2. Price count-up: "From £750" counts from 0 when the card appears. */
-  function initCountUp() {
-    if (reduced || !('IntersectionObserver' in window)) return;
-
-    var prices = document.querySelectorAll('.price');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        io.unobserve(entry.target);
-        animatePrice(entry.target);
-      });
-    }, { threshold: 0.6 });
-
-    prices.forEach(function (el) {
-      var node = el.firstChild;
-      if (node && node.nodeType === 3 && /£[\d,]+/.test(node.textContent)) {
-        io.observe(el);
-      }
-    });
-
-    function animatePrice(el) {
-      var node = el.firstChild;
-      var original = node.textContent;
-      var match = original.match(/£([\d,]+)/);
-      if (!match) return;
-      var target = parseInt(match[1].replace(/,/g, ''), 10);
-      var start = null;
-      var duration = 900;
-
-      function step(ts) {
-        if (!start) start = ts;
-        var t = Math.min((ts - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - t, 3);
-        var value = Math.round(target * eased);
-        node.textContent = original.replace(/£[\d,]+/, '£' + value.toLocaleString('en-GB'));
-        if (t < 1) window.requestAnimationFrame(step);
-      }
-      window.requestAnimationFrame(step);
-    }
-  }
+  /* Prices remain static. Commercial values must never display intermediate amounts. */
 
   /* 3. Hero glow parallax: the ambient lights drift with the pointer. */
   function initParallax() {
@@ -150,45 +111,7 @@
   }
 
 
-  /* 6. Form submissions: post to the Payband forms endpoint, then show thanks. */
-  function initForms() {
-    var endpoint = 'https://script.google.com/macros/s/AKfycbz14Rc3sHDOGX82lJorhdTVB6J1vLwmTcoQwJhv_Xt-02z8QI8oChmz9mrzJmU8sqXR/exec';
-    var forms = document.querySelectorAll('form.gas-form');
-    Array.prototype.forEach.call(forms, function (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var data = new FormData(form);
-        if (data.get('bot-field')) { window.location.href = 'thanks.html'; return; }
-        var body = new URLSearchParams();
-        data.forEach(function (v, k) { body.append(k, v); });
-        var btn = form.querySelector('button[type="submit"]');
-        var label = btn ? btn.textContent : '';
-        if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
-        fetch(endpoint, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: body.toString()
-        }).then(function () {
-          window.location.href = 'thanks.html';
-        }).catch(function () {
-          if (btn) { btn.disabled = false; btn.textContent = label; }
-          var err = form.querySelector('.form-error');
-          if (!err) {
-            err = document.createElement('p');
-            err.className = 'form-error';
-            err.style.color = '#b3261e';
-            err.style.marginTop = '10px';
-            form.appendChild(err);
-          }
-          err.textContent = 'That did not send. Please email us instead and we will reply within one working day.';
-        });
-      });
-    });
-  }
-
-
-  /* 7. Tracker filters: show only the member states matching the chosen status. */
+  /* 6. Tracker filters: show only the member states matching the chosen status. */
   function initTrackerFilters() {
     var btns = document.querySelectorAll('.tk-btn');
     if (!btns.length) return;
@@ -206,10 +129,8 @@
   }
 
   initReveal();
-  initCountUp();
   initParallax();
   initTilt();
   initHeaderScroll();
-  initForms();
   initTrackerFilters();
 })();
