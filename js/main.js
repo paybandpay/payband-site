@@ -152,7 +152,7 @@
 
   /* 6. Form submissions: post to the Payband forms endpoint, then show thanks. */
   function initForms() {
-    var endpoint = 'https://script.google.com/macros/s/AKfycbxbbcTVrS-7zdS4DAOXG9AaEi9hZZLbnoSrDV4B4-RHYGOzdSgfhQvA4msS7jzjHCaueQ/exec';
+    var endpoint = 'https://script.google.com/macros/s/AKfycbzZI3BI5aonZjQoKFpanAPdDTHlgm56sD4VvzsHXsakJB2xbV2dNgVmDmstumDgHG8/exec';
     var forms = document.querySelectorAll('form.gas-form');
     Array.prototype.forEach.call(forms, function (form) {
       form.addEventListener('submit', function (e) {
